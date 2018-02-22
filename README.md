@@ -35,16 +35,12 @@ Covers the statistical tests needed to analyze experiments including `chisq.test
 [Slides](http://r-marketing.r-forge.r-project.org/Instructor/Chapter6/Chapter6-ChapmanFeit.html#/)  
 [Code](http://r-marketing.r-forge.r-project.org/Instructor/Chapter6/Chapter6-ChapmanFeit-slides.R)  
 
-### Reproducible Research
-Review workflows from intro  
-R Markdown introduction  
-Analysis of real experimental data  
-Firms Analysis  
+### Reproducible research: Firms Analysis
+Using R Markdown to create a seamless research workflow  
 [Data](https://github.com/eleafeit/RforResearch/blob/master/Firms%20Analysis/firms.csv)  
 [Analysis](https://github.com/eleafeit/RforResearch/blob/master/Firms%20Analysis/FirmsAnalysis.Rmd)  
 
-### Putting it all together 
-Chicks Analysis
+### Putting it all together: Chicks analysis  
 [Data](https://github.com/eleafeit/RforResearch/blob/master/Chicks%20Analysis/rhea.tables.grams.20150626.csv)  
 [Starter Analysis File](https://github.com/eleafeit/RforResearch/blob/master/Chicks%20Analysis/ChicksAnalysis.Rmd)  
 
