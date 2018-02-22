@@ -8,7 +8,7 @@ This repository contains files related to an in-person workshop designed to help
 
 ### Introduction
 
-[Slides]()  
+[Slides](https://github.com/eleafeit/RforResearch/blob/master/RforResearch.html)  
 
 ### Tour of RStudio  
 
@@ -40,12 +40,13 @@ Review workflows from intro
 R Markdown introduction  
 Analysis of real experimental data  
 Firms Analysis  
-[Data]()  
-[Analysis]()  
+[Data](https://github.com/eleafeit/RforResearch/blob/master/Firms%20Analysis/firms.csv)  
+[Analysis](https://github.com/eleafeit/RforResearch/blob/master/Firms%20Analysis/FirmsAnalysis.Rmd)  
 
 ### Putting it all together 
-[Data]()  
-[Starter Analysis File]()  
+Chicks Analysis
+[Data](https://github.com/eleafeit/RforResearch/blob/master/Chicks%20Analysis/rhea.tables.grams.20150626.csv)  
+[Starter Analysis File](https://github.com/eleafeit/RforResearch/blob/master/Chicks%20Analysis/ChicksAnalysis.Rmd)  
 
 ### Chapter 7: Regression (time permitting)
 [Slides](http://r-marketing.r-forge.r-project.org/Instructor/Chapter7/Chapter7-ChapmanFeit.html)   
