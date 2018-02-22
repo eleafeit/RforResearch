@@ -1,0 +1,117 @@
+---
+title: "Analysis of Firms Experiment"
+author: "Elea McDonnell Feit"
+date: "1/18/2018"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+setwd("/Users/emf75/Google Drive/_Workshops/R for Behavioral Research Workshop/Firms Analysis/")
+```
+
+# Data
+
+The data describes an experiment where respondents where given a story about a company that either did or did not take a stand regarding an abortion-related law. Each row describes the story that was given to the repondent and their evaluation of the company. 
+
+- **stand** of a firm with respect to the law was either "against", "for" or "none" (randomly manipulated)  
+- **firm.value** was either "results"-oriented or "values"-oriented (randomly manipulated)
+- **hypocricy** is a measure of the level of perceived corporate hypocrisy. It is a composite of three perceived hypocrisy scale items.  
+- **purchase_int** is the composite score of three purchase intention scale items.  
+- **age** is the age of the respondent.  
+- **gender** is the gender of the respondent.  
+
+```{r}
+d <- read.csv("firms.csv")
+d$stand <- as.factor(d$stand)
+d$firm.value <- as.factor(d$firm.value)
+d$gender <- as.factor(d$gender)
+summary(d)
+```
+
+# Outliers
+After inspecting the data, we realized that observation 30 was incorrectly collected, so we remove them. 
+```{r}
+d <- d[-30,]
+summary(d)
+```
+
+# Analysis 
+
+We hypothesize that when values-oriented (versus results-oriented) companies abstain from taking a political stand, consumers perceive them to be hypocritical. This, in turn, will lead to lower purchase intention for the products offered by those companies. Based on this hypothesis, we created a new variable indicating whether the firm was described as taking a stand.
+```{r}
+d$stand.yn <- as.character(d$stand)
+d$stand.yn[d$stand.yn=="against" | d$stand.yn=="for"] <- "stand"
+d$stand.yn <- as.factor(d$stand.yn)
+summary(d$stand.yn)
+```
+
+When value-oriented companies fail to take a stand, they are perceived as hypocritical 
+
+```{r}
+boxplot(hypocrisy ~ stand.yn + firm.value, data=d, main="Hypocrisy", ylab="composite hypocrisy score")
+```
+
+Statistical significance of the interaction between stand.yn and firm.value is confirmed by ANOVA.
+
+```{r}
+m1 <- lm(hypocrisy ~ stand.yn*firm.value, data=d) # interactions
+anova(m1)
+```
+
+Similarly, purchase intent is lower for those value-oriented firms who do not take a stand.
+
+```{r}
+boxplot(purchase_int ~ stand.yn + firm.value, data=d, main="Hypocrisy", ylab="composite hypocrisy score")
+```
+
+```{r}
+m2 <- lm(purchase_int ~ stand.yn*firm.value, data=d)
+anova(m2)
+```
+
+I also did some simple t-tests for fun. 
+```{r}
+t.test(d$hypocrisy[d$stand.yn=="no stand"], d$hypocrisy[d$stand.yn=="stand"])
+p1 <- t.test(d$hypocrisy[d$stand.yn=="no stand"], d$hypocrisy[d$stand.yn=="stand"])$p.value
+t.test(d$purchase_int[d$stand.yn=="no stand"], d$purchase_int[d$stand.yn=="stand"])
+t.test(d$hypocrisy[d$firm.value=="results"], d$hypocrisy[d$firm.value=="values"])
+t.test(d$purchase_int[d$firm.value=="results"], d$purchase_int[d$firm.value=="values"])
+```
+The first test is significant at p= `r p1`. 
+
+
+# Sample characteristics
+The sample contains similar numbers of men and women. 
+```{r}
+summary(d$gender)
+plot(d$gender)
+```
+
+The distribution of age is typical for mTurk.
+```{r}
+summary(d$age)
+hist(d$age, main="Histogram of Respondent Age")
+```
+
+# Randomization check 
+The proportion of women in each of the 6 (= 2 x 3) randomized treatments is similar with one exception. 
+```{r}
+xtabs(~ gender + stand + firm.value, data=d)
+plot(xtabs(~ gender + stand + firm.value, data=d))
+```
+The distribution of age is similar across the randomly assigned treatments, confirming that the randomization looks okay. 
+```{r}
+aggregate(age ~ stand + firm.value, data=d, FUN=mean)
+plot(aggregate(age ~ stand, data=d, FUN=mean), ylim=c(15,80))
+plot(age ~ stand, data=d)
+```
+
+
+

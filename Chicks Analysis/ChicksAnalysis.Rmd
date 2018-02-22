@@ -1,0 +1,45 @@
+---
+title: "Chick Analysis"
+author: "Elea McDonnell Feit"
+date: "1/18/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("~/Google Drive/_Workshops/R for Behavioral Research Workshop/Chicks Analysis") # change this
+```
+
+# Data
+```{r}
+data <- read.csv("rhea.tables.grams.20150626.csv")
+levels(data$treatment) <- c("Control (n=17)\nInvoluntary Bucket", 
+                            "Treatment (n=18)\nVoluntary Walk-on")
+summary(data)
+```
+
+Write a t-test comparing the control and treatment groups. Edit this text to describe the analysis.
+```{r}
+# to do
+```
+
+
+Conduct an ANOVA on the percent gain as a function of treatment, breading_group, gender and color. 
+```{r}
+# to do
+```
+
+Create a boxplot comparing the control and treatment groups.
+```{r}
+# to do
+```
+
+This is a beanplot (sometimes called violin plot) that was used in the publication. What are the advantages of a beanplot over a boxplot?
+```{r}
+library(beanplot)
+beanplot(pct_gain_10.25~treatment, data=data,
+         col=c("lightgray", "black", "black", "red"), 
+         ylab="percent", 
+         main="Percent Weight Gain Day 10 to Day 25,26") 
+abline(h=c(-1:4*100), lty=2, col="dark gray")
+```
