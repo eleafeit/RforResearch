@@ -29,12 +29,19 @@ By simplifying and automating your analysis process, you will **save time** and 
 
 Workshop Plan
 ========================================================
-- Introduction
+This week: 
+- Introduction: why R? 
 - Basics of R as a programming language (Chapter 2)
-- Comparing groups: tables and visualizations (Chapter 5)
-- Comparing groups: statistical tests (Chapter 6)
-- Linear regression (Chapter 7, time permitting)
+
+Assignment: 
+- DataCamp: Introduction to Data
+
+Next week: 
 - Streamlining your workflow with R Markdown
+- Live demo (data TBD)
+  - Comparing groups: tables and visualizations (Chapter 5) 
+  - Comparing groups: statistical tests (Chapter 6)
+  - Linear regression (Chapter 7)
 
 R for Marketing Research and Analytics
 ========================================================
@@ -60,6 +67,7 @@ type: prompt
 **Dr. Elea McDonnell Feit** is an Assistant Professor of Marketing at Drexel University and a Senior Fellow of the Wharton Customer Analytics Initiative. 
 
 
+
 What is R?
 ========================================================
 
@@ -83,7 +91,6 @@ What can you do with R?
 * **Data visualization**
 * **Regression**
 * **Documenting analysis**
-* **Communicating findings**
 * Building data-oriented software products
 
 **The highlighted topics are the focus of this workshop.**
