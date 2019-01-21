@@ -2,44 +2,55 @@
 title: "Chick Analysis"
 author: "Elea McDonnell Feit"
 date: "1/18/2018"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-setwd("~/Google Drive/_Workshops/R for Behavioral Research Workshop/Chicks Analysis") # change this
+setwd("~/repos/RforResearch/Chicks Analysis") # change this
+library(tidyverse)
 ```
 
 # Data
+This was data provide to me by Dr. Sue McDonnell on chick growth. This was data from an experiment where....
 ```{r}
-data <- read.csv("rhea.tables.grams.20150626.csv")
-levels(data$treatment) <- c("Control (n=17)\nInvoluntary Bucket", 
-                            "Treatment (n=18)\nVoluntary Walk-on")
-summary(data)
+chickdata <- read.csv("rhea.tables.grams.20150626.csv")
+#levels(data$treatment) <- c("Control (n=17)\nInvoluntary Bucket", 
+#                            "Treatment (n=18)\nVoluntary Walk-on")
+summary(chickdata)
+glimpse(chickdata)
 ```
 
-Write a t-test comparing the control and treatment groups. Edit this text to describe the analysis.
+Create a scatterplot showing the relationship between grams at day 0 and grams at day 25. 
 ```{r}
-# to do
+plot(grams_day25 ~ grams_day0, data=chickdata)
+
+ggplot(data=chickdata, aes(x=grams_day0, y=grams_day25)) + 
+  geom_point()
 ```
 
-
-Conduct an ANOVA on the percent gain as a function of treatment, breading_group, gender and color. 
+A boxplot shows the relationship between a continuous response variable and a discrete or categeorical explanatory variable. An alternative is the beanplot. Mom, this beanplot shows that the data is really noisy and it doesn't look like the hypothized effect is present.  I'm so sorry for your loss. 
 ```{r}
-# to do
-```
-
-Create a boxplot comparing the control and treatment groups.
-```{r}
-# to do
-```
-
-This is a beanplot (sometimes called violin plot) that was used in the publication. What are the advantages of a beanplot over a boxplot?
-```{r}
+boxplot(pct_gain_10.25 ~ treatment, data=chickdata)
 library(beanplot)
-beanplot(pct_gain_10.25~treatment, data=data,
+beanplot(pct_gain_10.25 ~ treatment, data=chickdata,
          col=c("lightgray", "black", "black", "red"), 
          ylab="percent", 
-         main="Percent Weight Gain Day 10 to Day 25,26") 
-abline(h=c(-1:4*100), lty=2, col="dark gray")
+         main="Percent Weight Gain Day 10 to Day 25,26")
 ```
+
+A t-test indicates the difference in percent weight gain is non-significant. 
+```{r}
+t.test(pct_gain_10.25 ~ treatment, data=chickdata)
+```
+
+
+```{r}
+simplemodel <- lm(pct_gain_10.25 ~ (treatment + gender + color + breading_group)^2 , data=chickdata)
+summary(simplemodel)
+anova(simplemodel)
+```
+
