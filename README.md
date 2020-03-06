@@ -1,9 +1,9 @@
 # R for Behavioral Researchers
 #### Elea McDonnel Feit
 #### 21 February 2018
+#### Updated 5 March 2020
 
 This repository contains files related to an in-person workshop designed to help behavioral researchers in business schools transition to using R and R Markdown.  The focus of the workshop is on giving participants the tools to do high-quality [reproducable research](https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research). The workshop combines materials from this repository with instructor slides from [R for Marketing Research and Analtyics](http://r-marketing.r-forge.r-project.org/). 
-
 # Workshop outline
 
 ## Week 1:
@@ -11,10 +11,11 @@ This repository contains files related to an in-person workshop designed to help
 ### Introduction
 
 [Slides](https://github.com/eleafeit/RforResearch/blob/master/RforResearch.html)  
+
 ### Tour of RStudio  
 
 ### Chapter 2: Basics of the R Language  
-We focuse on R as a programming language first and get new programmers comfortable with working in a programming environment    
+We focus on R as a programming language first and get new programmers comfortable with working in a programming environment    
 
 [Slides](http://r-marketing.r-forge.r-project.org/Instructor/Chapter2/Chapter2-ChapmanFeit.html#/)    
 [Code](http://r-marketing.r-forge.r-project.org/Instructor/Chapter2/Chapter2-ChapmanFeit-slides.R)    

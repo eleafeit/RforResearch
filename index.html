@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -254,9 +254,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type="text/css">
 .main-container {
@@ -270,30 +268,91 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
 
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -306,66 +365,81 @@ $(document).ready(function () {
 </div>
 
 
-<section id="r-for-behavioral-researchers" class="level1">
+<div id="r-for-behavioral-researchers" class="section level1">
 <h1>R for Behavioral Researchers</h1>
-<section id="elea-mcdonnel-feit" class="level4">
+<div id="elea-mcdonnel-feit" class="section level4">
 <h4>Elea McDonnel Feit</h4>
-</section>
-<section id="february-2018" class="level4">
+</div>
+<div id="february-2018" class="section level4">
 <h4>21 February 2018</h4>
-<p>This repository contains files related to an in-person workshop designed to help behavioral researchers in business schools transition to using R and R Markdown. The focus of the workshop is on giving participants the tools to do high-quality <a href="https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research">reproducable research</a>. The workshop combines materials from this repository with instructor slides from <a href="http://r-marketing.r-forge.r-project.org/">R for Marketing Research and Analtyics</a>.</p>
-</section>
-<section id="workshop-outline" class="level2">
-<h2>Workshop outline</h2>
-<section id="introduction" class="level3">
+</div>
+<div id="updated-5-march-2020" class="section level4">
+<h4>Updated 5 March 2020</h4>
+<p>This repository contains files related to an in-person workshop designed to help behavioral researchers in business schools transition to using R and R Markdown. The focus of the workshop is on giving participants the tools to do high-quality <a href="https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research">reproducable research</a>. The workshop combines materials from this repository with instructor slides from <a href="http://r-marketing.r-forge.r-project.org/">R for Marketing Research and Analtyics</a>. # Workshop outline</p>
+</div>
+<div id="week-1" class="section level2">
+<h2>Week 1:</h2>
+<div id="introduction" class="section level3">
 <h3>Introduction</h3>
 <p><a href="https://github.com/eleafeit/RforResearch/blob/master/RforResearch.html">Slides</a></p>
-</section>
-<section id="tour-of-rstudio" class="level3">
+</div>
+<div id="tour-of-rstudio" class="section level3">
 <h3>Tour of RStudio</h3>
-</section>
-<section id="chapter-2-basics-of-the-r-language" class="level3">
+</div>
+<div id="chapter-2-basics-of-the-r-language" class="section level3">
 <h3>Chapter 2: Basics of the R Language</h3>
-<p>We focuse on R as a programming language first and get new programmers comfortable with working in a programming environment</p>
+<p>We focus on R as a programming language first and get new programmers comfortable with working in a programming environment</p>
 <p><a href="http://r-marketing.r-forge.r-project.org/Instructor/Chapter2/Chapter2-ChapmanFeit.html#/">Slides</a><br />
 <a href="http://r-marketing.r-forge.r-project.org/Instructor/Chapter2/Chapter2-ChapmanFeit-slides.R">Code</a></p>
-</section>
-<section id="keeping-raw-data-organized" class="level3">
+</div>
+<div id="keeping-raw-data-organized" class="section level3">
 <h3>Keeping raw data organized</h3>
 <p>One header row<br />
 One row for each observation<br />
 No “formatting-as-data”</p>
-</section>
-<section id="chapter-5-differences-between-groups" class="level3">
+</div>
+</div>
+<div id="assignment" class="section level2">
+<h2>Assignment:</h2>
+<p>(DataCamp)[www.datacamp.com] Course: <a href="https://www.datacamp.com/courses/introduction-to-data">Introduction to Data</a></p>
+</div>
+<div id="week-2" class="section level2">
+<h2>Week 2:</h2>
+<div id="using-r-markdown-to-create-a-seamless-research-workflow" class="section level3">
+<h3>Using R Markdown to create a seamless research workflow</h3>
+</div>
+<div id="live-demo" class="section level3">
+<h3>Live demo</h3>
+<div id="firms-analysis" class="section level4">
+<h4>Firms Analysis</h4>
+<p><a href="https://github.com/eleafeit/RforResearch/blob/master/Firms%20Analysis/firms.csv">Data</a><br />
+<a href="https://github.com/eleafeit/RforResearch/blob/master/Firms%20Analysis/FirmsAnalysis.Rmd">Analysis</a></p>
+</div>
+<div id="chicks-analysis" class="section level4">
+<h4>Chicks Analysis</h4>
+<p><a href="https://github.com/eleafeit/RforResearch/blob/master/Chicks%20Analysis/rhea.tables.grams.20150626.csv">Data</a><br />
+<a href="https://github.com/eleafeit/RforResearch/blob/master/Chicks%20Analysis/ChicksAnalysis.Rmd">Starter Analysis File</a></p>
+</div>
+</div>
+<div id="chapter-5-differences-between-groups" class="section level3">
 <h3>Chapter 5: Differences between groups</h3>
 <p>Covers techniques for data manipulation like <code>aggregate()</code> and <code>table()</code> and visualization including <code>histogram()</code> and <code>boxplot</code></p>
 <p><a href="http://r-marketing.r-forge.r-project.org/Instructor/Chapter5/Chapter5-ChapmanFeit.html#/">Slides</a><br />
 <a href="http://r-marketing.r-forge.r-project.org/Instructor/Chapter5/Chapter5-ChapmanFeit-slides.R">Code</a></p>
-</section>
-<section id="chapter-6-statistical-tests" class="level3">
+</div>
+<div id="chapter-6-statistical-tests" class="section level3">
 <h3>Chapter 6: Statistical tests</h3>
 <p>Covers the statistical tests needed to analyze experiments including <code>chisq.test()</code>, <code>t.test()</code> and <code>anova()</code></p>
 <p><a href="http://r-marketing.r-forge.r-project.org/Instructor/Chapter6/Chapter6-ChapmanFeit.html#/">Slides</a><br />
 <a href="http://r-marketing.r-forge.r-project.org/Instructor/Chapter6/Chapter6-ChapmanFeit-slides.R">Code</a></p>
-</section>
-<section id="reproducible-research-firms-analysis" class="level3">
-<h3>Reproducible research: Firms Analysis</h3>
-<p>Using R Markdown to create a seamless research workflow<br />
-<a href="https://github.com/eleafeit/RforResearch/blob/master/Firms%20Analysis/firms.csv">Data</a><br />
-<a href="https://github.com/eleafeit/RforResearch/blob/master/Firms%20Analysis/FirmsAnalysis.Rmd">Analysis</a></p>
-</section>
-<section id="putting-it-all-together-chicks-analysis" class="level3">
-<h3>Putting it all together: Chicks analysis</h3>
-<p><a href="https://github.com/eleafeit/RforResearch/blob/master/Chicks%20Analysis/rhea.tables.grams.20150626.csv">Data</a><br />
-<a href="https://github.com/eleafeit/RforResearch/blob/master/Chicks%20Analysis/ChicksAnalysis.Rmd">Starter Analysis File</a></p>
-</section>
-<section id="chapter-7-regression-time-permitting" class="level3">
+</div>
+<div id="chapter-7-regression-time-permitting" class="section level3">
 <h3>Chapter 7: Regression (time permitting)</h3>
 <p><a href="http://r-marketing.r-forge.r-project.org/Instructor/Chapter7/Chapter7-ChapmanFeit.html">Slides</a><br />
 <a href="http://r-marketing.r-forge.r-project.org/Instructor/Chapter7/Chapter7-ChapmanFeit-slides.R">Code</a></p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
 
@@ -384,6 +458,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
