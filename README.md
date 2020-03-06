@@ -3,7 +3,8 @@
 #### 21 February 2018
 #### Updated 5 March 2020
 
-This repository contains files related to an in-person workshop designed to help behavioral researchers in business schools transition to using R and R Markdown.  The focus of the workshop is on giving participants the tools to do high-quality [reproducable research](https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research). The workshop combines materials from this repository with instructor slides from [R for Marketing Research and Analtyics](http://r-marketing.r-forge.r-project.org/). 
+This repository contains files related to an in-person workshop designed to help behavioral researchers in business schools transition to using R and R Markdown.  The focus of the workshop is on giving participants the tools to do high-quality [reproducable research](https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research). The workshop combines materials from this repository with instructor slides from [R for Marketing Research and Analtyics](http://r-marketing.r-forge.r-project.org/).  
+
 # Workshop outline
 
 ## Week 1:
@@ -34,12 +35,12 @@ No "formatting-as-data"
 
 ### Live demo
 #### Firms Analysis
-[Data](https://github.com/eleafeit/RforResearch/blob/master/Firms%20Analysis/firms.csv)  
-[Analysis](https://github.com/eleafeit/RforResearch/blob/master/Firms%20Analysis/FirmsAnalysis.Rmd)  
+[Data](https://eleafeit.github.io/RforResearch/Firms%20Analysis/firms.csv)  
+[Analysis](https://eleafeit.github.com/RforResearch/Firms%20Analysis/FirmsAnalysis.Rmd)  
 
 #### Chicks Analysis
-[Data](https://github.com/eleafeit/RforResearch/blob/master/Chicks%20Analysis/rhea.tables.grams.20150626.csv)  
-[Starter Analysis File](https://github.com/eleafeit/RforResearch/blob/master/Chicks%20Analysis/ChicksAnalysis.Rmd)  
+[Data](https://eleafeit.github.com/RforResearch/Chicks%20Analysis/rhea.tables.grams.20150626.csv)  
+[Starter Analysis File](https://eleafeit.github.com/RforResearch/Chicks%20Analysis/ChicksAnalysis.Rmd)  
 
 ### Chapter 5: Differences between groups
 Covers techniques for data manipulation like `aggregate()` and `table()` and visualization including `histogram()` and `boxplot`  
