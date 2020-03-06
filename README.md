@@ -27,7 +27,7 @@ One row for each observation
 No "formatting-as-data"  
 
 ## Assignment: 
-(DataCamp)[www.datacamp.com] Course: [Introduction to Data](https://www.datacamp.com/courses/introduction-to-data)
+[DataCamp](www.datacamp.com) Course: [Introduction to Data](https://www.datacamp.com/courses/introduction-to-data)
 
 ## Week 2:
 
