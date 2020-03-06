@@ -10,7 +10,7 @@ This repository contains files related to an in-person workshop designed to help
 
 ### Introduction
 
-[Slides](https://github.com/eleafeit/RforResearch/blob/master/RforResearch.html)  
+[Slides](https://eleafeit.github.io/RforResearch/RforResearch.html)  
 
 ### Tour of RStudio  
 
