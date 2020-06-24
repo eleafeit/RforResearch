@@ -3,9 +3,9 @@ title: "Chick Analysis"
 author: "Elea McDonnell Feit"
 date: "1/18/2018"
 output:
-  html_document: default
-  pdf_document: default
   word_document: default
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -18,10 +18,8 @@ library(tidyverse)
 This was data provide to me by Dr. Sue McDonnell on chick growth. This was data from an experiment where....
 ```{r}
 chickdata <- read.csv("rhea.tables.grams.20150626.csv")
-#levels(data$treatment) <- c("Control (n=17)\nInvoluntary Bucket", 
-#                            "Treatment (n=18)\nVoluntary Walk-on")
-summary(chickdata)
 glimpse(chickdata)
+summary(chickdata)
 ```
 
 Create a scatterplot showing the relationship between grams at day 0 and grams at day 25. 

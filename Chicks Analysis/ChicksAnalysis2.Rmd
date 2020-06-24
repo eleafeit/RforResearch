@@ -1,0 +1,69 @@
+---
+title: "Chick Analysis for Dr. McDonnell"
+output:
+  pdf_document: default
+  html_notebook: default
+  word_document: default
+---
+
+
+```{r}
+setwd("~/repos/RforResearch/Chicks Analysis")
+chickdata <- read.csv(file="rhea.tables.grams.20150626.csv")
+chickdata$chick <- as.factor(chickdata$chick)
+glimpse(chickdata)
+```
+
+```{r}
+summary(chickdata)
+```
+
+There is a chick that has very large weight at day 25. Is this data point correct? 
+```{r}
+chickdata[chickdata$grams_day25 > 1705,]
+```
+
+Yikes! It looks like the chicks that got the walk-on treatment lost weight. 
+```{r}
+mean(chickdata$pct_gain_10.25[chickdata$treatment=="Control: Involuntary Bucket"])
+mean(chickdata$pct_gain_10.25[chickdata$treatment=="Treatment: Voluntary Walk-On"])
+```
+
+
+```{r}
+plot(pct_gain_10.25 ~ treatment, data=chickdata)
+```
+
+```{r}
+plot(grams_day25 ~ grams_day10, data=chickdata)
+```
+
+t.test
+```{r}
+t.test(pct_gain_10.25 ~ treatment, data=chickdata)
+```
+
+lm
+```{r}
+mean(chickdata$pct_gain_10.25[chickdata$treatment=="Control: Involuntary Bucket"]) - mean(chickdata$pct_gain_10.25[chickdata$treatment=="Treatment: Voluntary Walk-On"])
+
+m1 <- lm(pct_gain_10.25 ~ treatment, data=chickdata)
+summary(m1)
+```
+
+anova
+```{r}
+summary(aov(m1))
+```
+
+fancy lm
+```{r}
+m2 <- lm(pct_gain_10.25 ~ treatment*breading_group + gender + grams_day0, data=chickdata)
+summary(m2)
+```
+
+beanplots
+```{r}
+library(beanplot)
+beanplot(pct_gain_10.25 ~ treatment, data=chickdata)
+```
